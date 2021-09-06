@@ -1,0 +1,13 @@
+@fcamara @dasa
+Feature: Dasa
+  I want to use this template for my feature file
+
+  Background: 
+    Given I navigate to DASA website
+
+  Scenario: Brand navigation
+    Given I navigate to menu "Somos Dasa" option "Nossas Marcas"
+    When I filter "Regi%C3%B5es" and select option "S%C3%A3o%20Paulo"
+    #Then I print all results
+    #Given I select the first option
+    #Then I verify if I navigate to "https://delboniauriemo.com.br/"

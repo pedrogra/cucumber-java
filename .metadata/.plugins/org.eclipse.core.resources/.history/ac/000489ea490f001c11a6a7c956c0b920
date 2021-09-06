@@ -1,0 +1,15 @@
+package br.com.dasa.testrunner;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+//import cucumber.api.junit.Cucumber;
+
+
+
+@CucumberOptions(
+		features = "Feature"
+		,glue={"stepDefinition"}
+		)
+public class TestRunner {
+
+}

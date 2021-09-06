@@ -1,0 +1,14 @@
+package br.com.dasa.model;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class NossasMarcas {
+	WebDriver driver;
+	private String XselectList = "//select[#id='locations-1-91']"; 
+	
+
+	public NossasMarcas(Webdriver _driver) {
+		driver = _driver;
+	}
+}

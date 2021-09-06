@@ -1,0 +1,6 @@
+package br.com.dasa.util;
+
+public class Util {
+	public static WebDriver driver;
+
+}

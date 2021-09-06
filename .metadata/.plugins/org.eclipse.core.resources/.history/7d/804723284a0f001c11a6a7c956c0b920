@@ -1,0 +1,13 @@
+# encoding: iso-8859-1
+
+Feature: Dasa
+
+  Background: 
+    Given I navigate to DASA website
+
+  Scenario: Brand navigation
+    Given I navigate to menu "Somos Dasa" option "Nossas Marcas"
+    When I filter "Regiões" and select option "São Paulo"
+    Then I print all results
+    When I select "delboniauriemo.com.br" brand
+    Then I verify if I navigated to "https://delboniauriemo.com.br/"

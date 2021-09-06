@@ -1,0 +1,14 @@
+package br.com.dasa.model;
+
+import org.openqa.selenium.WebDriver;
+
+public class NossasMarcas {
+	WebDriver driver;
+	private String XselectList = ""; 
+	
+	
+	
+	public NossasMarcas(Webdriver _driver) {
+		
+	}
+}

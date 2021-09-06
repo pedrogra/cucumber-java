@@ -1,0 +1,17 @@
+package br.com.dasa.model;
+
+public class Home {
+	
+	private String xMenu = ""; 
+	private String xOption = "";
+	
+	public WebElement GetMenu(String name) {
+		
+	}
+	
+	public WebElement GetOption(String name) {
+		
+	}
+	
+
+}

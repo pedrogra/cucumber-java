@@ -1,0 +1,17 @@
+package br.com.dasa.steps;
+
+import io.cucumber.java.*;
+
+public class Hooks {
+	
+	@Before
+	public void SetBrowser() {
+		
+	}
+	
+	@After
+	public void CloseBrowser() {
+		
+	}
+
+}

@@ -1,0 +1,40 @@
+package br.com.dasa.steps;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+
+import io.cucumber.java.en.Given;
+
+public class dasaSteps{
+	private ChromeDriver driver;
+	
+	public dasaSteps() {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+	
+	
+	@Given("^I navigate to DASA website$")
+	public void NavigateToDasa() {
+		driver.navigate().to("http://www.dasa.com.br" );		
+	}
+	
+	@Given("I navigate to menu {string} option {string}")
+	public void i_navigate_to_menu_option(String _menu, String _option) {
+		WebElement menu = driver.findElement(By.xpath("//div[contains(@class,\"eWFgbM\")]//a[@label=\""+_menu+"\"]/div"));
+		WebElement option = driver.findElement(By.xpath("//a[@label=\""+_option+"\"]"));
+		
+		Actions action = new Actions(driver);
+		action.moveToElement(menu).moveToElement(option).click().perform();
+		//action.moveToElement(option).click().perform();
+
+	}
+
+}

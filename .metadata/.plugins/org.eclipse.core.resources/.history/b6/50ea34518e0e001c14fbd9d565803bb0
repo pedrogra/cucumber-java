@@ -1,0 +1,26 @@
+package br.com.dasa.model;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Home {
+	
+	WebDriver driver;
+	private String xMenu = ""; 
+	private String xOption = "";
+	
+	
+	public Home(WebDriver _driver) {
+		driver = _driver;
+	}
+	
+	public WebElement GetMenu(String name) {
+		
+	}
+	
+	public WebElement GetOption(String name) {
+		
+	}
+	
+
+}

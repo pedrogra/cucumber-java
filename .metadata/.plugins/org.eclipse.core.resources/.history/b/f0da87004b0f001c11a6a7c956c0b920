@@ -1,0 +1,15 @@
+package br.com.dasa.util;
+
+import org.openqa.selenium.WebDriver;
+
+public class Util {
+	public static WebDriver driver;
+	
+	public static WebDriver GetDriver() {
+		return driver;
+	}
+	
+	public static WebDriver setDriver(WebDriver _drv) {
+		driver = _drv;
+	}
+}

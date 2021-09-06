@@ -1,0 +1,35 @@
+package br.com.dasa.steps;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+
+import io.cucumber.java.en.Given;
+
+public class dasaSteps{
+	private ChromeDriver driver;
+	
+	public dasaSteps() {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+	
+	
+	@Given("^I navigate to DASA website$")
+	public void NavigateToDasa() {
+		driver.navigate().to("http://www.dasa.com.br" );		
+	}
+	
+	@Given("I navigate to menu {string} option {string}")
+	public void i_navigate_to_menu_option(String string, String string2) {
+		driver = new ChromeDriver();
+		Actions action = new Actions(webdriver);
+		WebElement we = driver.findElement(By.xpath("html/body/div[13]/ul/li[4]/a"));
+		action.moveToElement(we).moveToElement(webdriver.findElement(By.xpath("/expression-here"))).click().build().perform();
+
+	}
+
+}
